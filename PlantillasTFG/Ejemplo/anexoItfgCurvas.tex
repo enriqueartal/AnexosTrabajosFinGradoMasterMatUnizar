@@ -1,0 +1,49 @@
+\documentclass[10pt]{article}
+
+\usepackage{anexos}
+
+
+\fancyfoot[C]{\sffamily Página \textbf{\thepage} de \textbf{\pageref{LastPage}}}
+
+
+
+
+
+
+\begin{document}
+\input{datoscomunes}
+\input{datosI}
+\sffamily
+\anexoI
+\cajacurso % Introducir el curso académico
+
+
+\cajadepartamento
+
+
+\cajatituloI
+
+%%%%%%%%%%%%%%% Los cinco primeros parámetros son las anchuras
+%%%%%%%%%%%%%%% de las cinco últimas columnas
+%%%%%%%%%%%%%%% y ponente
+\directoresI{4}{5}{1.2}{2.5}{1.5}
+
+%%%%%%%%%%%%%%% Preasignación, se alterna \eleccionNO y \eleccionSI
+\cajapreasignado{}
+
+%%%%%%%%%%%%%%%%%%%%%%% 
+\cajalugar
+
+
+
+\cajadescripcion
+
+
+
+\actividades
+
+
+%%%%%%%%%%%%%%%% El último parámetro permite ajustar longitudes.
+\cajafirmasI{3.55}
+
+\end{document}
