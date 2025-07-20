@@ -7,3 +7,4 @@ Modo de uso:
 - Compilar el fichero `anexoN.tex`.
 
   Es la primera versión, se ruega comunicar erratas y mejoras, directamente o usando *pull requests*.
+  Hay una carpeta con ejemplos.
