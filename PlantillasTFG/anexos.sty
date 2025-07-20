@@ -1,0 +1,789 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%% Paquetes
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{amssymb,amsfonts, amsmath}
+\usepackage[english, spanish]{babel}
+\usepackage{blindtext}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{graphicx}{}
+\usepackage{colorframed}
+\usepackage{wasysym}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage[a4paper,left=1cm, right=1cm, top=1cm, bottom=1.5cm]{geometry}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Comunes
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\neworrenewcommand}[1]{\providecommand{#1}{}\renewcommand{#1}}
+
+
+
+\parindent=0pt
+
+%%%%%%%%%%%%%%%%%%%%%% Logo
+\newcommand\ciencias{%
+\begin{flushleft}
+\hspace{-1.5cm}
+\includegraphics[height=3cm]{ciencias}
+\end{flushleft}}
+
+%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%% Atajos check y no check
+\newcommand{\eleccionSI}{\CheckedBox}
+\newcommand{\eleccionNO}{\Square}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%% Marcos y encabezamiento
+\setlength\FrameRule{1.5pt}
+\renewcommand{\headrulewidth}{0pt}
+\pagestyle{fancy}
+\fancyhead{}\fancyfoot{}
+\fancyhead{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand\fecha[3]{%
+#1
+de
+#2
+de 
+20{}#3}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Propios Anexo I
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\anexoI}{%
+\ciencias
+
+\textbf{Este documento debe ser entregado por el director en la Secretaría del Departamento dentro del plazo establecido, para su
+remisión a la Comisión de Garantía de la Calidad del Grado en Matemáticas}
+
+\begin{center}
+\LARGE\textbf{ANEXO I}
+\end{center}
+\begin{center}
+\begin{framed}
+\Large \textbf{PROPUESTA DE TRABAJO FIN DE GRADO EN MATEMÁTICAS}
+\end{framed}
+\end{center}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Curso
+\newcommand{\cajacurso}{%
+\begin{framed}
+\noindent\textbf{CURSO ACADÉMICO:}
+\curso
+\end{framed}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newcommand{\cajadepartamento}{%
+\begin{framed}
+\noindent\textbf{DEPARTAMENTO RESPONSABLE:}
+\departamento
+\end{framed}}
+
+%%%%%%%%%%%%%%%%%%%%%% Título Anexo I
+\newcommand{\cajatituloI}{%
+\begin{framed}
+\noindent\textbf{TÍTULO DEL TFG (en castellano y en inglés):}
+
+\vspace{3mm}
+\titulo
+\end{framed}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%% Directores anexo I
+\newcommand{\directoresI}[5]{%
+\begin{center}
+\begin{tabular}{|l|p{#1cm}|p{#2cm}|p{#3cm}|p{#4cm}|p{#5cm}|}\hline
+ & \textbf{Apellidos, Nombre} 
+ &  \textbf{Centro y relación contractual con el centro} 
+ & \textbf{Doctor (sí/no)} 
+ & \textbf{email} 
+ & \textbf{Teléfono} \\\hline
+\textbf{Director/a 1} & 
+\diapellido\dicoma\ \dinombre &  
+\dicentro&  
+\didr&  
+\diemail&  
+\ditelefono
+\\\hline
+\textbf{Director/a 2} &
+\diiapellido\diicoma\ \diinombre &  
+\diicentro&  
+\diidr&  
+\diiemail&  
+\diitelefono  
+\\\hline
+\textbf{Ponente} &
+\papellido\pcoma\ \pnombre &  
+\pcentro&  
+\pdr&  
+\pemail&  
+\ptelefono 
+\\\hline
+\end{tabular}
+\end{center}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%% Preasignación
+\newcommand{\cajapreasignado}{%
+\textbf{Marque esta casilla si este trabajo corresponde a un acuerdo previo con un/a estudiante y por lo tanto ya
+está preasignado:
+\preasignado
+}
+\vspace{5mm}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%% Lugar
+\newcommand{\cajalugar}{%
+\textit{Lugar previsto para la realización del TFG:}
+
+\vspace{5mm}
+\hspace{1cm} Facultad de Ciencias:
+\lugarciencias
+\hspace{1cm}Otro:
+\framebox[12cm]{\vphantom{1}\lugarotro} %
+
+\vspace{5mm}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%% Descripción
+\newcommand{\cajadescripcion}{%
+\textit{\textbf{Breve descripción de los objetivos y del plan de trabajo a desarrollar por el alumno}}
+
+(Comente las tareas a realizar, técnicas a utilizar, etc. \textbf{máximo: 250 palabras}). Además, de acuerdo con lo expuesto en
+las directrices propias de su Grado:
+\begin{itemize}[label=--]
+\item Si es el caso, justifique la necesidad de un segundo Director/a
+\item Si de forma extraordinaria el TFG está afectado por un acuerdo de confidencialidad, justifique las razones y aporte
+de la documentación requerida
+\end{itemize}
+
+\vspace{5mm}
+
+\begin{framed}
+\descripcion
+\end{framed}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Relleno de la descripción
+\newcommand{\relleno}[2]{{\selectlanguage{english}\textcolor{white}{\Blindtext[#1][#2]}\selectlanguage{spanish}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%% Actividades
+\newcommand{\actividades}{%
+\textbf{\textit{Información para el estudiante}:} si se considera necesario, incluir un desglose aproximado por actividades
+
+\begin{center}%Se pueden ajustar las anchuras
+\begin{tabular}{|p{12cm}|p{1cm}|}\hline
+ \textbf{Actividad}  & \textbf{Horas} 
+\\\hline
+\acti & \horasi 
+\\\hline
+\actii & \horasii
+\\\hline
+\actiii & \horasiii
+\\\hline
+\activ & \horasiv 
+\\\hline
+\actv & \horasv 
+\\\hline
+\actvi & \horasvi
+\\\hline
+\actvii & \horasvii 
+\\\hline
+\actviii & \horasviii
+\\\hline
+\textbf{TOTAL}& \horastotal
+\\\hline
+\end{tabular}
+\end{center}
+\vspace{5mm}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%% Apartado de firmas anexo I
+\newcommand{\cajafirmasI}[1]{%
+\begin{center}
+%\vspace{2cm}
+En \ciudad, 
+\fecha{\diaI}{\mesI}{{}\anyoI}
+\end{center}
+
+\begin{small}{(La propuesta deberá estar firmada por los directores y el ponente, en su caso, y contar con el V$^\text{o}$B$^\text{o}$ del Departamento responsable)}
+\end{small}
+
+\vspace{5mm}
+
+El \textbf{personal investigador contratado por obra y servicio} para la realización de proyectos específicos de investigación científica y
+técnica, \textbf{podrá colaborar en la dirección de trabajos de fin de titulación}, según el art$^\text{o}$ 7 del Acuerdo de 24 de enero de 2020, del
+Consejo de Gobierno de la Universidad de Zaragoza, en tanto en cuanto el objeto de dichos trabajos esté directa e inmediatamente
+relacionado con la obra o servicio para la que ha sido contratado, mediante fórmulas de \textbf{codirección}.
+\vspace{2mm}
+
+Será necesario el acuerdo expreso de la persona titular del órgano de dirección y con informe favorable de la CGC.
+\vspace{2mm}
+
+La colaboración en esta docencia de este personal requerirá siempre la autorización del investigador principal.
+\vspace{2mm}
+
+A tal fin será preciso que el investigador principal del proyecto emita un informe razonado en este sentido, asumiendo las
+responsabilidades que pudieran generarse en el caso de que las inexactitudes en el informe supongan una irregularidad en la
+contratación laboral temporal que pueda dar lugar a la conversión del contrato temporal en indefinido no fijo.
+\vspace{2mm}
+
+Dicho investigador principal deberá incluir en el proyecto o contrato de investigación a los estudiantes dirigidos, al menos mediante
+mención en la memoria final del proyecto o contrato.
+\vspace{2cm}
+
+\begin{center}
+Fdo.: 
+\hfill 
+Fdo.: 
+\hfill
+Fdo.:
+\hspace*{4cm}
+
+Director/a \dinombre\ \diapellido
+\hfill 
+Director/a \diinombre\ \diiapellido
+\hfill
+Ponente \pnombre\ \papellido
+\hspace*{#1cm} %Sustituir por el nombre o ajustar distancia
+
+\end{center}
+
+
+\textbf{V$^\text{o}$B$^\text{o}$}
+\vspace{2cm}
+
+Fdo.: 
+
+\directordepartamento\\
+Director/a del Departamento de \departamento
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Propios Anexo II
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\anexoII}{%
+\ciencias
+
+\textbf{Este documento debe ser entregado por el director en la Secretaría del Departamento dentro del plazo establecido, para su
+remisión a la Comisión de Garantía de la Calidad del Grado en Matemáticas}
+{}
+\begin{center}
+\LARGE\textbf{ANEXO II}
+\end{center}
+\begin{center}
+\begin{framed}
+\Large \textbf{ACUERDO DE TUTELA DE TRABAJO FIN DE GRADO EN
+MATEMÁTICAS}
+\end{framed}
+\end{center}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Datos del alumno
+\newcommand{\cajaalumnoII}%[9]
+{
+$\blacksquare$ \textbf{Datos del estudiante que presenta el TFG}
+
+\vspace{-3mm}
+\centerline{\rule{\textwidth}{1.5pt}}
+Apellidos y nombre: \makebox[12cm][l]{\alumnoapellidos\alumnocoma\ \alumnonombre}
+DNI: \alumnodni
+
+Dirección: \alumnodireccion
+N$^{\text{o}}$: \alumnonumerocalle
+Piso: \alumnopiso
+
+C. Postal: \alumnocp
+Localidad: \alumnolocalidad
+Provincia: \alumnoprovincia
+
+Teléfono: \alumnotelefono
+E-mail: \alumnoemail
+
+Departamento que gestiona el TFG: \departamento
+\vspace{1cm}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%% Título Anexo II
+\newcommand{\cajatituloII}{%
+$\blacksquare$ \textbf{Título del TFG (en castellano y en inglés):}
+
+\vspace{-3mm}
+\centerline{\rule{\textwidth}{1.5pt}}
+\vspace{3mm}
+\titulo
+
+\vspace{5mm}
+Si considera necesario especificar en qué consistirá el trabajo respecto a la propuesta del Anexo I, utilice el siguiente
+espacio:
+
+\vspace{5mm}
+\begin{minipage}[t][3cm][t]{\textwidth}
+\descripcionII
+\end{minipage}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%% Directores Anexo II
+\newcommand{\directoresII}{%
+$\blacksquare$ \textbf{Directores / Ponente}
+
+\vspace{-3mm}
+\centerline{\rule{\textwidth}{1.5pt}}
+
+\vspace{3mm}
+\textbf{1. Director / a, Nombre y apellidos:} \dinombre\ \diapellido 
+
+\vspace{-3mm}
+\centerline{\rule{\textwidth}{.5pt}}
+
+\centerline{V$^\text{o}$B$^\text{o}$}
+
+\vspace{3mm}
+\textbf{2. Director / a, Nombre y apellidos:} \diinombre\ \diiapellido 
+
+\vspace{-3mm}
+\centerline{\rule{\textwidth}{.5pt}}
+
+\centerline{V$^\text{o}$B$^\text{o}$}
+
+\vspace{3mm}
+\textbf{3. Ponente, Nombre y apellidos:} \pnombre\ \papellido 
+
+\vspace{-3mm}
+\centerline{\rule{\textwidth}{.5pt}}
+
+\centerline{V$^\text{o}$B$^\text{o}$}
+
+\vspace{3mm}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%% Apartado de firmas Anexo II
+\newcommand{\cajafirmasII}{%
+$\blacksquare$ \textbf{Firma del o la estudiante}
+
+\vspace{-3mm}
+\centerline{\rule{\textwidth}{1.5pt}}
+
+\vspace{4cm}
+
+
+\centerline{\ciudad, \fecha{\diaII}{\mesII}{{}\anyoII}}
+
+
+
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Propios Anexo IVa
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%% Inicio del documento
+\newcommand{\principioIVa}{%
+\ciencias
+
+\textbf{Este documento deberá ser enviado por el estudiante al correo electrónico \href{mailto:acacienz@unizar}{acacienz@unizar} de la
+	Secretaría de la Facultad, dentro del plazo establecido al efecto.
+	El depósito conlleva la autorización a la Facultad de Ciencias del uso del trabajo para fines de gestión, tales
+	como los procesos de renovación de la acreditación de las titulaciones}
+{}
+\begin{center}
+\LARGE\textbf{ANEXO IV}
+\end{center}
+\begin{center}
+\begin{framed}
+\Large \textbf{DEPÓSITO DE TRABAJO FIN DE GRADO EN MATEMÁTICAS}
+\end{framed}
+\end{center}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Datos alumno
+\newcommand{\cajaalumnoIVa}%[9]
+{
+$\blacksquare$ \textbf{Datos del estudiante que presenta el TFG}
+
+\vspace{-3mm}
+\centerline{\rule{\textwidth}{1.5pt}}
+Apellidos y nombre: \alumnoapellidos\alumnocoma\ \alumnonombre
+DNI: \alumnodni
+
+Dirección: \alumnodireccion
+N$^{\text{o}}$: \alumnonumerocalle
+Piso: \alumnopiso
+
+C. Postal: \alumnocp
+Localidad: \alumnolocalidad
+Provincia: \alumnoprovincia
+
+Teléfono: \alumnotelefono
+E-mail: \alumnoemail
+
+
+\vspace{1cm}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%% Solicita
+\newcommand{\cajasolicita}{%
+$\blacksquare$ \textbf{SOLICITA}
+
+\vspace{-3mm}
+\centerline{\rule{\textwidth}{1.5pt}}
+\begin{minipage}[t][3cm][t]{\textwidth}
+Que se tenga por presentado el Trabajo Fin de Grado titulado: \textbf{(en castellano y en inglés):}\\
+\titulo
+\end{minipage}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%% Declaración
+\newcommand{\cajadeclaracion}{%
+	$\blacksquare$ \textbf{DECLARACIÓN}
+	
+	\vspace{-3mm}
+	\centerline{\rule{\textwidth}{1.5pt}}
+	\begin{minipage}[t][3cm][t]{\textwidth}
+		Con la firma de este documento el estudiante declara:
+		\begin{itemize}[label=-]
+		\item Asumir la originalidad y autoría del trabajo, entendida tal y como se expresa en el artículo 14.3 del
+		Reglamento de los Trabajos Fin de Grado y de Fin de Máster en la Universidad de Zaragoza
+		\item Ser conocedor de que para poder realizar la defensa del TFG debe tener pendientes de superar como
+		máximo 12 ECTS del grado (\textbf{artículo 9.2} del Reglamento de los Trabajos Fin de Grado y Fin de Máster
+		en la Universidad de Zaragoza), y que en caso e incumplimiento la defensa quedará sin efecto,
+		debiendo proceder a una nueva defensa en otra convocatoria
+		\end{itemize}
+	\end{minipage}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%% Apartado de firmas anexo IVa
+\newcommand{\cajafirmasIVa}{%
+
+\vspace{1cm}
+
+
+\centerline{\ciudad, \fecha{\diaIVa}{\mesIVa}{{}\anyoIVa}}
+\centerline{\small (Firma alumno)}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%% Documentación
+\newcommand{\cajadoc}{%
+	$\blacksquare$ \textbf{DOCUMENTACIÓN}
+	
+	\vspace{-3mm}
+	\centerline{\rule{\textwidth}{1.5pt}}
+		Con la firma de este documento el estudiante declara:
+		\begin{itemize}[]
+			\item[$\vistobueno$] Visto bueno del Director/ponente.
+			\item[$\justificantedeposita$] Justificante depósito de TFG en DEPOSITA de la UZ.
+			\item[$\existenotrosdocumentos$] Otros documentos de acuerdo con las directrices propias de cada Grado. \textbf{ESPECIFICAR}:
+			
+	\vspace{3mm}
+	\begin{minipage}[t][\dimensionotros cm][t]{\textwidth}
+		\otrosdocumentos
+	\end{minipage}
+		\end{itemize}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Propios Anexo IVb
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%% Inicio del documento
+\newcommand{\principioIVb}{%
+	\ciencias
+	
+	\textbf{Este documento deberá ser enviado por el estudiante al correo electrónico \href{mailto:acacienz@unizar}{acacienz@unizar} de la
+		Secretaría de la Facultad, dentro del plazo establecido al efecto}
+	{}
+	\begin{center}
+		\LARGE\textbf{ANEXO IV}
+	\end{center}
+	\begin{center}
+		\begin{framed}
+			\Large \textbf{AUTORIZACIÓN DEL DEPÓSITO DEL TRABAJO FIN DE GRADO
+				EN MATEMÁTICAS}
+				
+				(VISTO BUENO DIRECTORES/PONENTES) 
+		\end{framed}
+	\end{center}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\cajaestudianteresumen}{%
+\begin{framed}
+	\textbf{ESTUDIANTE}
+	
+	\textbf{Apellidos}  \alumnoapellidos\ \textbf{Nombre} \alumnonombre
+	
+	\textbf{TITULACIÓN: } Grado en Matemáticas
+	\end{framed}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%% Título
+\newcommand{\cajatituloIVb}{%
+	\begin{framed}
+		\noindent\textbf{TÍTULO DEL TFG (en castellano y en inglés):}
+		
+		\vspace{3mm}
+		\titulo
+		
+		\vspace{3mm}
+		\textbf{Dpto. Responsable de la propuesta: }\departamento
+\end{framed}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%% Apartado de firmas anexo IVb
+\newcommand{\cajafirmasIVb}[1]{%
+	\begin{itemize}[label=-]
+		\item Los abajo firmantes, dan su visto bueno y autorizan el depósito de la memoria correspondiente al
+		Trabajo Fin de Grado arriba indicado, realizado bajo nuestra tutela y que se ajusta a los criterios que
+		marcan la normativa y la Guía Docente correspondiente.
+		-\item Y autorizan su publicación en el repositorio institucional de la UZ. \autoriza
+		\end{itemize}
+	\begin{center}
+		%\vspace{2cm}
+		\ciudad, \fecha{\diaIVb}{\mesIVb}{{}\anyoIVb}
+	\end{center}
+	
+	\vspace{2cm}
+	\begin{center}
+		Fdo.: 
+		\hfill 
+		Fdo.: 
+		\hfill
+		Fdo.:
+		\hspace*{4cm}
+		
+		Director/a \dinombre\ \diapellido
+		\hfill 
+		Director/a \diinombre\ \diiapellido
+		\hfill
+		Ponente \pnombre\ \papellido
+		\hspace*{#1 cm} %Sustituir por el nombre o ajustar distancia
+		
+		\vspace{5mm}
+			\begin{textbf}{(Esta autorización deberá ser firmada por el director o directores del Trabajo Fin de Grado, así
+					como el ponente si lo hubiere) }
+		\end{textbf}
+		
+		
+	\end{center}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Propios Anexo V
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%% Inicio del documento anexo V
+\newcommand{\principioV}{%
+\ciencias
+
+\textbf{Este informe deberá enviarse en formato pdf al correo electrónico  \href{mailto:acacienz@unizar}{acacienz@unizar} de la Secretaría de la Facultad
+	dentro del plazo establecido al efecto, para su remisión al Presidente del Tribunal de TFG en Matemáticas }
+{}
+\begin{center}
+\LARGE\textbf{ANEXO V}
+\end{center}
+\begin{center}
+\begin{framed}
+\Large \textbf{ACUERDO DE TUTELA DE TRABAJO FIN DE GRADO EN
+MATEMÁTICAS}
+\end{framed}
+\end{center}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\cajaestudiantetitulo}{%
+	\begin{framed}
+		\textbf{ESTUDIANTE}
+		
+		\textbf{Apellidos y Nombre}  \alumnoapellidos\alumnocoma\ \alumnonombre
+		%
+		%\centerline{\rule{\textwidth}{1.5pt}}
+	\end{framed}
+	\vspace*{-.8cm}	\begin{framed}
+		
+		\textbf{TÍTULO DEL TFG:}
+				
+		\vspace{3mm}
+			\titulo
+			
+			\vspace{1cm}
+			\noindent Departamento responsable de la propuesta: \departamento
+
+		
+	\end{framed}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Directores anexo V
+\newcommand{\cajadirectoresV}{%
+	\begin{framed}
+		\textbf{Datos del director/a}
+		
+		\textbf{Apellidos y Nombre}  \diapellido\dicoma\ \dinombre
+		%
+		%\centerline{\rule{\textwidth}{1.5pt}}
+	\end{framed}
+	\begin{framed}
+	\textbf{Datos del director/a}
+	
+	\textbf{Apellidos y Nombre}  \diiapellido\diicoma\ \diinombre
+	%
+	%\centerline{\rule{\textwidth}{1.5pt}}
+\end{framed}
+
+	\begin{framed}
+	\textbf{Datos del ponente}
+	
+	\textbf{Apellidos y Nombre}  \papellido\pcoma\ \pnombre
+	%
+	%\centerline{\rule{\textwidth}{1.5pt}}
+\end{framed}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Caja de evaluación
+\newcommand{\evaluacion}{%
+	\textbf{Evaluación del trabajo realizado:}  (0: deficiente; 1: regular; 2: normal; 3: bien; 4: muy bien; 5: excelente) 
+	
+	\begin{center}%Se pueden ajustar las anchuras
+		\begin{tabular}{|p{12cm}|p{2cm}|}\hline
+			\textbf{Actividades (júzguese lo que proceda según el tipo de trabajo y tutela)}  & \textbf{Evaluación} 
+			\\\hline
+			\acti & \evali 
+			\\\hline
+			\actii & \evalii
+			\\\hline
+			\actiii & \evaliii
+			\\\hline
+			\activ & \evaliv 
+			\\\hline
+			\actv & \evalv 
+			\\\hline
+			\actvi & \evalvi
+			\\\hline
+			\actvii & \evalvii 
+			\\\hline
+			\actviii & \evalviii
+			\\\hline
+		\end{tabular}
+	\end{center}
+	\vspace{5mm}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Comentarios
+\newcommand{\cajacomentarios}{%
+	\textbf{Comentarios y calificación}. Incluya otros aspectos que considere de interés, no recogidos anteriormente y una
+			calificación numérica global de 0 a 10. \textbf{Máximo 250 palabras.}
+	
+	(Comente las tareas a realizar, técnicas a utilizar, etc. \textbf{máximo: 250 palabras}).
+	
+	
+	\begin{framed}
+		\comentarios
+	\end{framed}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%% Apartado de firmas anexo V
+\newcommand{\cajafirmasV}[1]{%
+	\begin{center}
+		%\vspace{2cm}
+		\ciudad, \fecha{\diaV}{\mesV}{{}\anyoV}
+	\end{center}
+	
+	\vspace{3cm}
+	
+	\begin{center}
+		Fdo.: 
+		\hfill 
+		Fdo.: 
+		\hfill
+		Fdo.:
+		\hspace*{4cm}
+		
+		Director/a \dinombre\ \diapellido
+		\hfill 
+		Director/a \diinombre\ \diiapellido
+		\hfill
+		Ponente \pnombre\ \papellido
+		\hspace*{#1cm} %Sustituir por el nombre o ajustar distancia
+		
+		\vspace{1cm}
+		\textbf{(Enviar en formato pdf al correo electrónico \href{mailto:acacienz@unizar}{acacienz@unizar}, indicando en el asunto el nombre del estudiante y
+		la titulación, una vez dado el visto bueno y autorización al depósito y presentación del Trabajo Fin de Grado)}
+		
+	\end{center}
+	
+
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
